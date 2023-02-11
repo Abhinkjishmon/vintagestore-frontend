@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Josefin+Sans:wght@300;400&family=Montserrat:wght@300&family=Poppins&family=Ubuntu&display=swap');
+
+body{
+    font-family: 'IM Fell French Canon SC', serif;
+    background-color: #FAF4EA;
+}
+
+.card-img-top:hover{
+    transform: scale(1.10);
+    transition: 0.5s;
+}
+
+/* .navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+} */

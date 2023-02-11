@@ -1,0 +1,10 @@
+.empty{
+    padding-top: 250px;
+    padding-left: 240px;
+    font-size: 60px;
+    font-weight: bold;
+}
+.btnshop:hover{
+    background-color:#FAF4EA ;
+    color: #29241E;
+}

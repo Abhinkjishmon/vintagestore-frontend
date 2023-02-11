@@ -1,0 +1,23 @@
+ <!-- Navigation-->
+ <nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" routerLink="/"><h1 class="text-center" style="font-size: 50px;font-weight: 500;color: #29241E;"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&nbsp; Vintage - Age</h1></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><input (keyup)="search($event)" type="text" placeholder="search for vintage products" class="form-control form-outline-dark"></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="/" style="color: #29241E;">Home</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="fashions/wish-list" style="color: #29241E;">Wish-List</a></li>
+               
+            </ul>
+            <form class="d-flex">
+                <a routerLink="/fashions/cart" class="btn btn-outline-dark" type="submit">
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">{{cartcount}}</span>
+                </a>
+            </form>
+        </div>
+    </div>
+</nav>
+

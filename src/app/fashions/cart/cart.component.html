@@ -1,0 +1,59 @@
+<!-- empty-cart -->
+<div class="container" *ngIf="cartitem.length==0">
+    <div class="row">
+        <div class="col-6">
+            <img src="https://cdn.dribbble.com/users/5107895/screenshots/14532312/media/a7e6c2e9333d0989e3a54c95dd8321d7.gif"  alt="">
+        </div>
+        <div class="col-6">
+            <h4 class="empty">Your vintage cart is empty!</h4>
+            <a class="btn" routerLink="/" style="margin-left: 250px;"class="btn btn-outline-dark">Shop Now</a>&nbsp;
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- cart -->
+<div class="container" *ngIf="cartitem.length!=0">
+    <div class="row">
+        <div class="col">
+            <table class="table border m-5">
+                <thead>
+                    <tr>
+                        <th>Number:</th>
+                        <th>Name:</th>
+                        <th>Image:</th>
+                        <th>Description:</th>
+                        <th>Action:</th>
+                        <th>Price:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let fashion of cartitem let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{fashion.title}}</td>
+                        <td><img [src]="fashion.image" style="height: 150px;width: 150px;" alt=""></td>
+                        <td>{{fashion.description}}</td>
+                        <td><i class="fa fa-trash text-danger"></i></td>
+                        <td>${{fashion.price}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="float: right;"class="mb-5">
+                <button (click)="emptyCart()" style="background-color:#29241E;color:#FAF4EA;"class="btn">Empty Cart</button>&nbsp;
+                <button style="background-color:#29241E;color:#FAF4EA; " routerLink="/" class="btn">Shop More</button>&nbsp;
+                <button style="background-color:#29241E;color:#FAF4EA;"class="btn">Check Out</button>&nbsp;
+                <b>Grand Total: $850</b>&nbsp;
+            </div>
+        </div>
+    </div>
+</div>
+
+
