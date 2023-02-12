@@ -9,6 +9,7 @@ import { CartService } from '../cart.service';
 export class CartComponent implements OnInit {
 
   cartitem:any=[]
+  grandTotal:number = 0
   constructor(private cart:CartService) { }
 
   ngOnInit(): void {
@@ -17,8 +18,14 @@ export class CartComponent implements OnInit {
         this.cartitem=data
       }
     )
+    this.grandTotal = this.cart.grandTotal()
   }
   emptyCart(){
     this.cart.removeCart()
+  }
+   //removeItem(product)
+   removeItem(product:any){
+    this.cart.removeCartItem(product)
+    this.grandTotal = this.cart.grandTotal()
   }
 }

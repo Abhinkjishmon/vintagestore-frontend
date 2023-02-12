@@ -41,7 +41,7 @@
                         <td>{{fashion.title}}</td>
                         <td><img [src]="fashion.image" style="height: 150px;width: 150px;" alt=""></td>
                         <td>{{fashion.description}}</td>
-                        <td><i class="fa fa-trash text-danger"></i></td>
+                        <td><i (click)="removeItem(fashion)" style="cursor: pointer;" class="fa fa-trash text-danger"></i></td>
                         <td>${{fashion.price}}</td>
                     </tr>
                 </tbody>
@@ -50,7 +50,7 @@
                 <button (click)="emptyCart()" style="background-color:#29241E;color:#FAF4EA;"class="btn">Empty Cart</button>&nbsp;
                 <button style="background-color:#29241E;color:#FAF4EA; " routerLink="/" class="btn">Shop More</button>&nbsp;
                 <button style="background-color:#29241E;color:#FAF4EA;"class="btn">Check Out</button>&nbsp;
-                <b>Grand Total: $850</b>&nbsp;
+                <b>Grand Total: ${{grandTotal}}</b>&nbsp;
             </div>
         </div>
     </div>
