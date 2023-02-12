@@ -31,7 +31,7 @@ export class WishListComponent implements OnInit {
   deletewish(fashion:any){
     this.api.deletewish(fashion.id).subscribe(
       (result:any)=>{
-        alert(result.message)
+        //alert(result.message)
         this.router.navigateByUrl('wish-list')
         // window.location.reload()
       },

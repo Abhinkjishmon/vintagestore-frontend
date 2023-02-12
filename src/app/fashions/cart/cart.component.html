@@ -49,7 +49,7 @@
             <div style="float: right;"class="mb-5">
                 <button (click)="emptyCart()" style="background-color:#29241E;color:#FAF4EA;"class="btn">Empty Cart</button>&nbsp;
                 <button style="background-color:#29241E;color:#FAF4EA; " routerLink="/" class="btn">Shop More</button>&nbsp;
-                <button style="background-color:#29241E;color:#FAF4EA;"class="btn">Check Out</button>&nbsp;
+                <button (click)="checkOut()" style="background-color:#29241E;color:#FAF4EA;"class="btn">Check Out</button>&nbsp;
                 <b>Grand Total: ${{grandTotal}}</b>&nbsp;
             </div>
         </div>

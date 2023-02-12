@@ -28,4 +28,8 @@ export class CartComponent implements OnInit {
     this.cart.removeCartItem(product)
     this.grandTotal = this.cart.grandTotal()
   }
+  checkOut(){
+    alert("Your order is placed.......")
+    this.cart.removeCart()
+  }
 }
